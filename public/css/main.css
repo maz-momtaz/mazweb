@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+/*
+font-family: 'Orbitron', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+
+:root {
+  --darkGray: #202020;
+  --gray: #3a3a3a;
+  --lightGray: #49494b;
+  --green: #8cc63f;
+  --silver: #d9d9d9;
+ }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--darkGray);
+  font-family: 'Montserrat', sans-serif;
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
+  font-size: 1.1rem;
+  color: var(--silver);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+  font-size: 3.6rem;
+  line-height: 3.2rem;
+}
+
+a {
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--darkGray); 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--lightGray); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green); 
+}
+
+.background {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('http://192.168.254.144/mazweb/images/bg-main.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* ::::: Menu Icons ::::: */
+.menu-open{
+  position: absolute;
+  z-index: 11;
+  top: 2rem;
+  left: 2rem;
+  width: 42px;
+  cursor: pointer;
+}
+
+.menu-icon-open .circle {
+  stroke: var(--silver);
+  stroke-width: "1.026"; 
+  fill: transparent;
+}
+
+.menu-icon-open .line {
+  fill: none;
+  stroke: var(--silver);
+  stroke-width: 1.026;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.menu-close{
+  position: absolute;
+  z-index: 11;
+  top: 2rem;
+  left: 2rem;
+  width: 42px;
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon-close .circle {
+  stroke: var(--gray);
+  stroke-width: "1.026"; 
+  fill: transparent;
+}
+
+.menu-icon-close .line {
+  fill: none;
+  stroke: var(--gray);
+  stroke-width: 1.026;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+
+/* ::::: Navigation ::::: */
+.nav{
+  position: fixed;
+  left: -100vw;
+  z-index: 9;
+  width: 100%;
+  height: 100vh;
+  background: var(--green);
+}
+.nav-links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  margin-top: 20vh;
+}
+.nav-links a{
+  color: var(--silver);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.nav-links a:hover {
+  color: var(--gray);
+}
+
+.social {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social a{
+  margin-left: 0.5rem;
+}
+.social a:nth-child(1){
+  margin-left:0;
+}
+.social img{
+  width: 26px;
+}
+
+.nav-veil{
+  position: fixed;
+  z-index: 8;
+  width: 65%;
+  height: 100%;
+  top: 0;
+  right: 60%;
+  background-color: var(--darkGray);
+  display: none; 
+  opacity: 0;
+}
+header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* .anim {
+
+} */
+.anim img {
+  position: absolute;
+  z-index: 2;
+  width: 90%;
+  height: 80%;
+  left: 50%;
+  margin-left: calc(90% / 2 * -1);
+  margin-top: 5%;
+}
+
+.obj-06 {
+  opacity: 0.8;
+}
+.obj-07 {
+  opacity: 0.6;
+}
+.obj-08 {
+  opacity: 0.3;
+}
+
+
+/* No media query for extra small devices (portrait phones, less than 576px)
+   since this is the default.
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .menu-close {
+    left: calc(35% + 2rem);
+  }
+  .menu-icon-close .circle {
+    stroke: var(--silver);
+  }
+  
+  .menu-icon-close .line {
+    stroke: var(--silver);
+  }
+  .nav {
+    width: 35%;
+  }
+  .nav-links {
+    margin-top: 20vh;
+    margin-right: 10%;
+    align-items: flex-end;
+    height: 35vh;
+    margin-top: 20vh;
+  }
+
+  .nav-links a {
+    font-size: 2rem;
+  }
+  .social {
+    height: 20vh;
+    margin-right: 10%;
+    justify-content: flex-end;
+  }
+  .social img{
+    width: 28px;
+  }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
