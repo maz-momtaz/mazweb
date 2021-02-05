@@ -7,14 +7,9 @@
     public function index(){
       
       $data = [
-        'page-title' => 'Home'
+        'page-title' => 'HOMEPAGE'
       ];
      
       $this->view('pages/index', $data);
-    }
-
-    public function about(){
-
-      $this->view('pages/about');
     }
   }
